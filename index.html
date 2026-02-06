@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Yağmur 🤍 Mert</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(#fff1f7, #ffe6ef);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      color: #5a2a3c;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 25px;
+      max-width: 420px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 4px solid #ffd1e1;
+    }
+    h1 {
+      color: #d63384;
+    }
+    p {
+      line-height: 1.7;
+      font-size: 17px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      background: #ff7aa2;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .message {
+      display: none;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #b02a5b;
+    }
+  </style>
+</head>
+<body>
+
+  <audio autoplay loop>
+    <source src="muzik.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="card">
+    <img src="yagmur.jpg">
+    <h1>Yağmur 🌧️</h1>
+    <p>
+      Bu site sadece senin için.<br><br>
+      Hassas kalbin, güzel gülüşün ve
+      dünyayı yumuşatan varlığın için…<br><br>
+      Ne olursa olsun yanında olduğumu bil istedim.
+    </p>
+
+    <button onclick="showMessage()">
+      Sana her zaman buradayım
+    </button>
+
+    <div class="message" id="msg">
+      🤍 Seni çok seviyorum – Mert
+    </div>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById("msg").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
