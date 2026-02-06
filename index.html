@@ -1,90 +1,122 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>Yağmur 🤍 Mert</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background: linear-gradient(#fff1f7, #ffe6ef);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-      color: #5a2a3c;
-    }
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 25px;
-      max-width: 420px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-    img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      border: 4px solid #ffd1e1;
-    }
-    h1 {
-      color: #d63384;
-    }
-    p {
-      line-height: 1.7;
-      font-size: 17px;
-    }
-    button {
-      margin-top: 20px;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 30px;
-      background: #ff7aa2;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    .message {
-      display: none;
-      margin-top: 20px;
-      font-weight: bold;
-      color: #b02a5b;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yağmur 💖</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: #ffeef4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Georgia", serif;
+}
+
+.card {
+  background: white;
+  width: 320px;
+  padding: 25px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffb6c9;
+  transition: opacity 2s ease-in-out;
+}
+
+h1 {
+  color: #e75480;
+  margin-top: 15px;
+}
+
+p {
+  color: #444;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+button {
+  background: #ff7fa2;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background: #ff5c8a;
+}
+
+.footer {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #e75480;
+}
+</style>
 </head>
+
 <body>
 
-  <audio autoplay loop>
-    <source src="muzik.mp3" type="audio/mpeg">
-  </audio>
+<div class="card">
+  <img id="photo" class="photo" src="yagmur.jpeg">
+  
+  <h1>Yağmur ☔</h1>
+  <p>
+    Hassas kalbin o güzel gülüşün ve varlığın için teşekkür ederim bitanem seni çok çok çok seviyorum iyiki varsın iyiki hayatımdasın her zaman yanımda olman beni çok mutlu ve huzurlu hissetiriyor <br><br>
+    Ne olursa olsun yanındayım her zaman
+  </p>
 
-  <div class="card">
-    <img src="yagmur.jpg">
-    <h1>Yağmur 🌧️</h1>
-    <p>
-      Bu site sadece senin için.<br><br>
-      Hassas kalbin, güzel gülüşün ve
-      dünyayı yumuşatan varlığın için…<br><br>
-      Ne olursa olsun yanında olduğumu bil istedim.
-    </p>
+  <button onclick="startLove()">Sana her zaman buradayım</button>
 
-    <button onclick="showMessage()">
-      Sana her zaman buradayım
-    </button>
+  <div class="footer">🤍 Seni çok seviyorum — Mert</div>
+</div>
 
-    <div class="message" id="msg">
-      🤍 Seni çok seviyorum – Mert
-    </div>
-  </div>
+<audio id="music" loop>
+  <source src="yagmur.mp3" type="audio/mpeg">
+</audio>
 
-  <script>
-    function showMessage() {
-      document.getElementById("msg").style.display = "block";
-    }
-  </script>
+<script>
+const photos = [
+  "yagmur.jpeg",
+  "yagmur2.jpeg",
+  "yagmur3.jpeg",
+  "yagmur4.jpeg",
+  "yagmur5.jpeg",
+  "yagmur6.jpeg",
+  "yagmur7.jpeg"
+];
+
+let index = 0;
+const img = document.getElementById("photo");
+
+setInterval(() => {
+  img.style.opacity = 0;
+  setTimeout(() => {
+    index = (index + 1) % photos.length;
+    img.src = photos[index];
+    img.style.opacity = 1;
+  }, 2000);
+}, 6000);
+
+function startLove() {
+  document.getElementById("music").play();
+  alert("Ben buradayım Yağmur 🤍");
+}
+</script>
 
 </body>
 </html>
+
